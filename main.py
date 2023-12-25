@@ -92,5 +92,5 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-df = pd.read_csv(./"data.csv")
+df = pd.read_csv("./data.csv")
 st.dataframe(filter_dataframe(df))
