@@ -60,7 +60,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             msg1 = f'👉 Despatch Bags : {bag_des}'
             st.error(msg1)    
         with con3:
-            bag_stk = list(df['CLOSING'][-1])
+            bag_stk = list(df['CLOSING'])[-1]
             msg2 = f'👉 Stock in Bags : {bag_stk}'
             st.info(msg2)
     except Exception as e :
