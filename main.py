@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from pandas.api.types import (is_categorical_dtype, is_datetime64_any_dtype,is_numeric_dtype,is_object_dtype,)
 
-st.title("Sulochna Cotton Spinning Mills Pvt Ltd")
+st.title("Sulochana Cotton Spinning Mills Pvt Ltd")
 st.write("Sullerumbu - 624710")
 st.write("""Yarn Stock Report on Jun - 2019 to 2023""")
 
