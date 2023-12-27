@@ -49,8 +49,15 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 if user_text_input:
                     df = df[df[column].str.contains(user_text_input)]
 
-    bag_prd = int(df['PROD'].sum())
-    st.success(bag_prd)
+    con1, con2  = st.columns(2)
+    with con1:
+        bag_prd = int(df['PROD'].sum())
+        msg = f'Production Bags : {bag_prd}'
+        st.success(msg)
+    with con2:
+        bag_des = int(df['SALES'].sum())
+        msg = f'Despatch Bags : {bag_des}'
+        st.error(msg)    
     return df
 
 
