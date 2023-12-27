@@ -49,7 +49,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 if user_text_input:
                     df = df[df[column].str.contains(user_text_input)]
 
-    con1, con2  = st.columns(2)
+    con1, con2,con3  = st.columns(3)
     try:
         with con1:
             bag_prd = int(df['PROD'].sum())
@@ -59,6 +59,10 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             bag_des = int(df['SALES '].sum())            
             msg1 = f'👉 Despatch Bags : {bag_des}'
             st.error(msg1)    
+        with con3:
+            bag_stk = list(df['CLOSING'][-1])
+            msg2 = f'👉 Stock in Bags : {bag_stk}'
+            st.info(msg2)
     except Exception as e :
         st.error(e)
     return df
