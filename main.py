@@ -55,10 +55,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             bag_prd = int(df['PROD'].sum())
             msg = f'👉 Production Bags : {bag_prd}'
             st.success(msg)
-        with con2:
-            st.write(df.columns)
-            bag_des = int(df['SALES'].sum())
-            #bag_des = (sum(bag_des) if bag_des else None)
+        with con2:            
+            bag_des = int(df['SALES '].sum())            
             msg1 = f'👉 Despatch Bags : {bag_des}'
             st.error(msg1)    
     except Exception as e :
