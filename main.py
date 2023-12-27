@@ -68,3 +68,6 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 df = pd.read_csv("./data.csv")
 st.dataframe(filter_dataframe(df))
+data = filter_dataframe(df)
+bag_prd = int(df['PROD'].sum())
+print(bag_prd)
