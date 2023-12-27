@@ -64,7 +64,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].str.contains(user_text_input)]
 
     bag_prd = int(df['PROD'].sum())
-    st.sucess(bag_prd)
+    st.success(bag_prd)
     return df
 
 
