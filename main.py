@@ -56,7 +56,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             msg = f'👉 Production Bags : {bag_prd}'
             st.success(msg)
         with con2:
-            st.write('SALES' in df.columns)
+            st.write(df.columns)
             bag_des = int(df['SALES'].sum())
             #bag_des = (sum(bag_des) if bag_des else None)
             msg1 = f'👉 Despatch Bags : {bag_des}'
