@@ -63,11 +63,12 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 if user_text_input:
                     df = df[df[column].str.contains(user_text_input)]
 
+    bag_prd = int(df['PROD'].sum())
+    st.sucess(bag_prd)
     return df
 
 
 df = pd.read_csv("./data.csv")
 st.dataframe(filter_dataframe(df))
-data = filter_dataframe(df)
-bag_prd = int(df['PROD'].sum())
-st.sucess(bag_prd)
+
+
