@@ -55,10 +55,10 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         msg = f'👉 Production Bags : {bag_prd}'
         st.success(msg)
     with con2:
-        bag_des = df['SALES']
+        #bag_des = df['SALES']
         #bag_des = (sum(bag_des) if bag_des else None)
         #msg1 = f'👉 Despatch Bags : {bag_des}'
-        #st.error(msg1)    
+        st.error('msg1')    
     return df
 
 
