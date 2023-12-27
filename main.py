@@ -52,12 +52,13 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     con1, con2  = st.columns(2)
     with con1:
         bag_prd = int(df['PROD'].sum())
-        msg = f'Production Bags : {bag_prd}'
+        msg = f'👉 Production Bags : {bag_prd}'
         st.success(msg)
     with con2:
-        bag_des = int(df['SALES'].sum())
-        msg = f'Despatch Bags : {bag_des}'
-        st.error(msg)    
+        bag_des = df['SALES']
+        bag_des = (sum(bag_des) if bag_des else None)
+        msg1 = f'👉 Despatch Bags : {bag_des}'
+        st.error(msg1)    
     return df
 
 
