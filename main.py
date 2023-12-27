@@ -50,15 +50,18 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].str.contains(user_text_input)]
 
     con1, con2  = st.columns(2)
-    with con1:
-        bag_prd = int(df['PROD'].sum())
-        msg = f'👉 Production Bags : {bag_prd}'
-        st.success(msg)
-    with con2:
-        bag_des = int(df['SALES'].sum())
-        #bag_des = (sum(bag_des) if bag_des else None)
-        msg1 = f'👉 Despatch Bags : {bag_des}'
-        st.error(msg1)    
+    try:
+        with con1:
+            bag_prd = int(df['PROD'].sum())
+            msg = f'👉 Production Bags : {bag_prd}'
+            st.success(msg)
+        with con2:
+            bag_des = int(df['SALES'].sum())
+            #bag_des = (sum(bag_des) if bag_des else None)
+            msg1 = f'👉 Despatch Bags : {bag_des}'
+            st.error(msg1)    
+    except Exception as e :
+        st.error(e)
     return df
 
 
