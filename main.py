@@ -64,7 +64,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             msg2 = f'👉 Stock in Bags : {bag_stk}'
             st.info(msg2)
     except Exception as e :
-        st.error(e)
+        st.warning(e)
     return df
 
 
