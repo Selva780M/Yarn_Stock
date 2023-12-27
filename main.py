@@ -7,11 +7,9 @@ from pandas.api.types import (
     is_object_dtype,
 )
 
-st.title("Sulochna Cotton Spinning Mills Pvt Ltd, Sullerumbu - 624710")
-
-st.write(
-    """Yarn Stock Report on Jun - 2019 to 2023.
-    """
+st.title("Sulochna Cotton Spinning Mills Pvt Ltd")
+st.write("Sullerumbu - 624710")
+st.write("""Yarn Stock Report on Jun - 2019 to 2023"""
 )
 
 
